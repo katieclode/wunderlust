@@ -28,7 +28,12 @@
 
 Also review the alt text on all of the images to ensure that it is descriptive and appropriate-->
         <header>
-            <img src="images/logo.png" alt="The Wunderlust logo shows blue waves and the outline of two palm trees against an orange sun">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/logo.png">
+                <source media="(max-width: 780px)" srcset="images/logo-M.png">
+                <source media="(max-width: 320px)" srcset="images/logo.png">
+                <img src="images/majorca-logo-S.png" alt="The Wunderlust logo shows blue waves and the outline of two palm trees against an orange sun">
+            </picture>
             <h1>Wunderlust Travel</h1>
             <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
             <nav>
@@ -66,7 +71,7 @@ Also review the alt text on all of the images to ensure that it is descriptive a
                 <section>
                     <h3>Plan Your Trip</h3>
                     <section>
-                        <h4>How to Get There
+                        <h4>How to Get There</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="225" height="225" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" /></svg>
                         <a href="#" title="Search for flights">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>

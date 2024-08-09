@@ -1,0 +1,305 @@
+/* Katie Clode */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url("https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat");
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* General Styles */
+
+h1, h2, h3 {
+    font-family: Molle, sans-serif;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: Montserrat, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2, h3 {
+    font-size: 2em;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    margin: .5rem 0;
+}
+
+/* Header */
+
+#skip, .sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+header {
+	background-image: linear-gradient(to bottom, var(--teal), var(--white));
+}
+
+#logo {
+	display: inline-block;
+}
+
+/* Menu Toggle */
+
+#menu-toggle {
+	display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#menu-toggle input {
+    display: none;
+}
+
+#menu-toggle label {
+    display: block;
+    background-color: var(--yellow);
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#menu-toggle ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    background-color: var(--teal);
+    color: var(--black);
+}
+
+#menu-toggle li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+#menu-toggle input:checked~ul {
+    display: block;
+}
+
+/* Sections */
+
+header, #plan, #testimonials, #about, #contact, footer {
+    padding: 1rem;
+}
+
+#intro h2, #intro p {
+    padding: 0 1rem;
+}
+
+#plan {
+    background-color: var(--yellow);
+}
+
+#plan section {
+    background-color: var(--teal);
+    padding: 1rem;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+#testimonials h4, #testimonials p, #testimonials q {
+    text-align: center;
+}
+
+#about {
+    background-color: var(--blue);
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    justify-items: center;
+}
+
+#about img {
+    height: 6rem;
+}
+
+/* form {
+	display: block;
+	width: 300px;
+	padding: 1em;
+	margin: 0 auto;
+	color: #222;
+	font-size: 1.1em;
+} */
+
+/* Contact */
+
+.form-required {
+    font-family:  Montserrat, sans-serif;
+    font-size: .5em;
+}
+
+input, label {
+	display: block;
+	width: 95%;
+}
+
+.required {
+  display: inline-block;
+  color: var(--purple);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+label {
+	padding-left: 0.5em;
+	margin: 0.75em 0 0.25em 0;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+	margin: 0 0 1rem .5rem;
+}
+
+.radio-control {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 4px solid var(--purple);
+    position: relative;
+}
+
+.radio-input input:checked+.radio-control::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+	font-size: 1em;
+	padding: 0.25em 0.5em;
+	border: 1px solid var(--purple);
+	height: 1.5em;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], .custom-select select {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--purple);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+fieldset {
+	border: none;
+}
+
+/* input[type=select] {
+    appearance: none;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--purple);
+    font-size: 16px;
+    box-sizing: border-box;
+} */
+
+input[type=submit] {
+    padding: .5rem 0;
+	height: 3rem;
+	width: 100%;
+	color: #fff;
+	background-color: var(--purple);
+}
+
+/* input[type=select] {
+    font-size: 1em;
+	padding: 0.25em 0.5em;
+	border: 1px solid var(--purple);
+	height: 1.5em;
+    width: 100%;
+} */

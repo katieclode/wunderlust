@@ -346,18 +346,49 @@ input[type=submit] {
         grid-column: 1;
     }
 
-	#plan div {
+	#plan div, #testimonials div{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
     }
 
-	#testimonials div {
+}
+
+/* Large Screens */
+@media screen and (min-width: 1000px) {
+	#intro {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+		margin: 40px;
+    }
+
+	#img-grid {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        column-gap: 15px;
+        padding: 0 15px;
+    }
+
+    #img-grid img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
+	#plan section, #testimonials section {
+		max-width: 10rem;
+	}
+
+	#about div {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
     }
-
 }

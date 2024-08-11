@@ -206,15 +206,6 @@ header, #plan, #testimonials, #about, #contact, footer {
     height: 6rem;
 }
 
-/* form {
-	display: block;
-	width: 300px;
-	padding: 1em;
-	margin: 0 auto;
-	color: #222;
-	font-size: 1.1em;
-} */
-
 /* Contact */
 
 .form-required {
@@ -259,14 +250,11 @@ label {
 }
 
 input[type="radio"] {
-    -webkit-appearance: none;
     appearance: none;
     margin-right: 10px;
 	font: inherit;
   	width: 1.15em;
   	height: 1.15em;
-  	/* border: 0.18em solid var(--purple);
-  	border-radius: 50%; */
 	border: none;
   	transform: translateY(-.5em);
   	display: grid;
@@ -306,14 +294,6 @@ fieldset {
 	border: none;
 }
 
-/* input[type=select] {
-    appearance: none;
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--purple);
-    font-size: 16px;
-    box-sizing: border-box;
-} */
 
 input[type=submit] {
     padding: .5rem 0;
@@ -322,14 +302,6 @@ input[type=submit] {
 	color: #fff;
 	background-color: var(--purple);
 }
-
-/* input[type=select] {
-    font-size: 1em;
-	padding: 0.25em 0.5em;
-	border: 1px solid var(--purple);
-	height: 1.5em;
-    width: 100%;
-} */
 
 /* Medium Screens */
 @media screen and (min-width: 600px) {

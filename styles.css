@@ -208,6 +208,10 @@ header, #plan, #testimonials, #about, #contact, footer {
 
 /* Contact */
 
+form {
+	max-width: 40rem;
+}
+
 .form-required {
     font-family:  Montserrat, sans-serif;
     font-size: .5em;
@@ -353,6 +357,10 @@ input[type=submit] {
         gap: 60px;
     }
 
+	h3 {
+		text-align: center;
+	}
+
 	#plan section, #testimonials section {
 		max-width: 10rem;
 	}
@@ -363,4 +371,8 @@ input[type=submit] {
         flex-wrap: wrap;
         gap: 2rem;
     }
+
+	form {
+		margin: auto;
+	}
 }
